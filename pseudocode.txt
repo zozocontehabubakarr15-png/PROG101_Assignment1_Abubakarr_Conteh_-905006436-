@@ -1,0 +1,33 @@
+PROG101 Assignment 1 — Student Grade & Performance Tracker
+Student Name: Abubakarr Conteh
+Student ID: 905006436
+
+START
+  DISPLAY "Enter student name: "
+  INPUT student_name
+  
+  DISPLAY "Enter score for Assessment 1 (0-100): "
+  INPUT score1
+  DISPLAY "Enter score for Assessment 2 (0-100): "
+  INPUT score2
+  DISPLAY "Enter score for Assessment 3 (0-100): "
+  INPUT score3
+  
+  // Calculate total and average
+  SET total = score1 + score2 + score3
+  SET average = total / 3
+  
+  // Evaluate pass/fail status
+  IF average >= 50.0 THEN
+      SET status = "Pass"
+  ELSE
+      SET status = "Fail"
+  ENDIF
+  
+  // Display summary report
+  DISPLAY "--- Academic Summary Report ---"
+  DISPLAY "Student Name: " + student_name
+  DISPLAY "Scores: " + score1 + ", " + score2 + ", " + score3
+  DISPLAY "Final Average: " + average
+  DISPLAY "Status: " + status
+END
